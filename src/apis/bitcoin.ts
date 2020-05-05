@@ -1,6 +1,6 @@
 import request from './request';
 
-const pre = 'https://cors-anywhere-anton.herokuapp.com/';
+const pre = 'https://cors-anywhere.herokuapp.com/';
 
 export async function getBalanceBlockInfo(address: string) {
   const url = `${pre}https://blockchain.info/multiaddr?active=${address}`;
