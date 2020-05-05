@@ -1,9 +1,7 @@
 import request from './request'
 
-const pre = process.env.REACT_APP_PREFIX || ''
-
 export async function getBalanceEtherscan (address: string) {
-  const url = `${pre}https://api.etherscan.io/api?module=account&action=balance&address=${address}&tag=latest&apikey=SZZWK7FDQ6QFAE9UX3M2W52BNM85K7DRZR`
+  const url = `https://api.etherscan.io/api?module=account&action=balance&address=${address}&tag=latest&apikey=SZZWK7FDQ6QFAE9UX3M2W52BNM85K7DRZR`
   return await request(url)
 }
 
