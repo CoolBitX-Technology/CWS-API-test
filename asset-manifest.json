@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/CWS-API-test/static/css/main.af940c86.chunk.css",
-    "main.js": "/CWS-API-test/static/js/main.d55fc876.chunk.js",
-    "main.js.map": "/CWS-API-test/static/js/main.d55fc876.chunk.js.map",
+    "main.js": "/CWS-API-test/static/js/main.b0a46290.chunk.js",
+    "main.js.map": "/CWS-API-test/static/js/main.b0a46290.chunk.js.map",
     "runtime-main.js": "/CWS-API-test/static/js/runtime-main.bda9a244.js",
     "runtime-main.js.map": "/CWS-API-test/static/js/runtime-main.bda9a244.js.map",
     "static/js/2.8ef4e164.chunk.js": "/CWS-API-test/static/js/2.8ef4e164.chunk.js",
     "static/js/2.8ef4e164.chunk.js.map": "/CWS-API-test/static/js/2.8ef4e164.chunk.js.map",
     "index.html": "/CWS-API-test/index.html",
-    "precache-manifest.c773642c4f57ffc1e44d363c2be38291.js": "/CWS-API-test/precache-manifest.c773642c4f57ffc1e44d363c2be38291.js",
+    "precache-manifest.331edeaa23c84ce449c6e645711d1e1c.js": "/CWS-API-test/precache-manifest.331edeaa23c84ce449c6e645711d1e1c.js",
     "service-worker.js": "/CWS-API-test/service-worker.js",
     "static/css/main.af940c86.chunk.css.map": "/CWS-API-test/static/css/main.af940c86.chunk.css.map",
     "static/js/2.8ef4e164.chunk.js.LICENSE.txt": "/CWS-API-test/static/js/2.8ef4e164.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.bda9a244.js",
     "static/js/2.8ef4e164.chunk.js",
     "static/css/main.af940c86.chunk.css",
-    "static/js/main.d55fc876.chunk.js"
+    "static/js/main.b0a46290.chunk.js"
   ]
 }
