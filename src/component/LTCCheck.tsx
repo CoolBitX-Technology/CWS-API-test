@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react'
 
-import { Accordion, AccordionPanel, Box, Text, TextInput } from 'grommet'
+import { Accordion, AccordionPanel, Box, TextArea, TextInput } from 'grommet'
 
 import { getBalanceCoinSpace, getBalanceOwnNode } from '../apis/litecoin'
 import { StatusText, StatusTitle } from './APIStatus'
@@ -44,7 +44,6 @@ function LTCCheck() {
 
 
   return (
-    <Box>
     <Accordion>
       <AccordionPanel label={<StatusTitle status={status} detail="Litecoin API" />}>
 
@@ -57,19 +56,18 @@ function LTCCheck() {
           <Accordion>
             <AccordionPanel label={<StatusText status={coinSpaceRes.status} detail="Coin.Space API" />}>
               <Box pad="small">
-                <Text>{coinSpaceRes.detail}</Text>
+                <TextArea value={coinSpaceRes.detail} disabled />
               </Box>
             </AccordionPanel>
             <AccordionPanel label={<StatusText status={cbxNodeRes.status} detail="CoolBitX Electrum API" />}>
               <Box pad="small">
-                <Text>{cbxNodeRes.detail}</Text>
+                <TextArea value={cbxNodeRes.detail} disabled />
               </Box>
             </AccordionPanel>
           </Accordion>
         </Box>
       </AccordionPanel>
     </Accordion>
-    </Box>
   )
 }
 
