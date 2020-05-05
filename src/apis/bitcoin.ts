@@ -12,7 +12,6 @@ export async function getBalanceBlockInfo(address: string) {
   };
   const url = `${pre}https://blockchain.info/multiaddr?active=${address}`;
   const res = await request(url, init);
-  return res
   return { detail: JSON.stringify(JSON.parse(res.detail).addresses), status: res.status }
 }
 
