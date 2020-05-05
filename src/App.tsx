@@ -22,10 +22,10 @@ import KAUCheck from './component/KA_Check'
 const theme = {
   global: {
     colors: {
-      brand: '#228BE6'
+      brand: '#000099'
     },
     font: {
-      family: 'Roboto',
+      family: 'Source+Code+Pro',
       size: '18px',
       height: '20px',
     },
@@ -38,10 +38,10 @@ function App() {
 
   return (
     <Grommet theme={theme} full>
-      <Box margin="small">
         <AppBar>
-          <Heading level='3' margin='none'>CoolWalletS API Test</Heading>
+          <Heading level='3'>CoolWalletS API Test</Heading>
         </AppBar>
+        <Box margin="small">
         <BTCCheck />
         <LTCCheck />
         <ETHCheck />
