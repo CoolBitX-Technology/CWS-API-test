@@ -4,7 +4,10 @@ const pre = process.env.REACT_APP_PREFIX || '';
 
 export async function getBalanceBlockInfo(address: string) {
   const init = {
-    headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'Content-Type' },
+    headers: { 
+      'Content-Type': 'application/json', 
+      'Access-Control-Allow-Origin': '*'
+    },
     method: 'GET',
   };
   const url = `${pre}https://blockchain.info/multiaddr?active=${address}`;
