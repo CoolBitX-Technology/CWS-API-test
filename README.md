@@ -1,0 +1,1 @@
+# Test for CoolWalletS APIs
