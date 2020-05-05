@@ -38,7 +38,7 @@ function App() {
 
   return (
     <Grommet theme={theme} full>
-      <Box fill>
+      <Box fill margin="medium">
         <AppBar>
           <Heading level='3' margin='none'>CoolWalletS API Test</Heading>
         </AppBar>
