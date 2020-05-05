@@ -1,6 +1,6 @@
 import request from './request';
 
-const pre = process.env.REACT_APP_PREFIX || '';
+const pre = 'https://cors-anywhere-anton.herokuapp.com/';
 
 export async function getBalanceBlockInfo(address: string) {
   const url = `${pre}https://blockchain.info/multiaddr?active=${address}`;
