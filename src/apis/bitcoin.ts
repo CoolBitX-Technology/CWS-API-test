@@ -6,7 +6,6 @@ export async function getBalanceBlockInfo(address: string) {
   const init = {
     headers: { 
       'Content-Type': 'application/json', 
-      'Access-Control-Allow-Origin': '*'
     },
     method: 'GET',
   };
