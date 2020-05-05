@@ -3,14 +3,8 @@ import request from './request';
 const pre = process.env.REACT_APP_PREFIX || '';
 
 export async function getBalanceBlockInfo(address: string) {
-  const init = {
-    headers: { 
-      'Content-Type': 'application/json', 
-    },
-    method: 'GET',
-  };
   const url = `${pre}https://blockchain.info/multiaddr?active=${address}`;
-  return await request(url, init);
+  return await request(url);
 }
 
 export async function getBalanceOwnNode(address: string) {
