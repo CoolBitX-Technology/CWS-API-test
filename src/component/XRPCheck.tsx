@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react'
 
-import { Accordion, AccordionPanel, Box, Text, TextInput } from 'grommet'
+import { Accordion, AccordionPanel, Box, TextArea, TextInput } from 'grommet'
 
 import { getBalanceGraphQL } from '../apis/ripple'
 import { StatusText, StatusTitle } from './APIStatus'
@@ -53,7 +53,7 @@ function XRPCheck() {
           <Accordion>
             <AccordionPanel label={<StatusText status={response.status} detail="CBX GraphQL Node" />}>
               <Box pad="small">
-                <Text>{response.detail}</Text>
+                <TextArea disabled value={response.detail}></TextArea>
               </Box>
             </AccordionPanel>
           </Accordion>

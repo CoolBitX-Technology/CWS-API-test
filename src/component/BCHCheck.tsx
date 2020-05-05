@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react'
 
-import { Accordion, AccordionPanel, Box, Text, TextInput } from 'grommet'
+import { Accordion, AccordionPanel, Box, TextArea, TextInput } from 'grommet'
 
 import { getBalanceOwnNode } from '../apis/bitcoincash'
 import { StatusText, StatusTitle } from './APIStatus'
@@ -41,25 +41,27 @@ function BCHCheck() {
 
 
   return (
-    <Accordion>
-      <AccordionPanel label={<StatusTitle status={status} detail="BitcoinCash API" />}>
+    <Box>
+      <Accordion>
+        <AccordionPanel label={<StatusTitle status={status} detail="BitcoinCash API" />}>
 
-        <Box pad="small">
-          <TextInput size="small" type="text" value={address} onChange={(e) => {
-            setaddress(e.target.value)
-          }
-          } />
-          <br />
-          <Accordion>
-            <AccordionPanel label={<StatusText status={cbxNodeRes.status} detail="CoolBitX Electrum API" />}>
-              <Box pad="small">
-                <Text>{cbxNodeRes.detail}</Text>
-              </Box>
-            </AccordionPanel>
-          </Accordion>
-        </Box>
-      </AccordionPanel>
-    </Accordion>
+          <Box pad="small">
+            <TextInput size="small" type="text" value={address} onChange={(e) => {
+              setaddress(e.target.value)
+            }
+            } />
+            <br />
+            <Accordion>
+              <AccordionPanel label={<StatusText status={cbxNodeRes.status} detail="CoolBitX Electrum API" />}>
+                <Box pad="small">
+                  <TextArea value={cbxNodeRes.detail} disabled></TextArea>
+                </Box>
+              </AccordionPanel>
+            </Accordion>
+          </Box>
+        </AccordionPanel>
+      </Accordion>
+    </Box>
   )
 }
 

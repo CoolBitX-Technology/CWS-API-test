@@ -11,7 +11,9 @@ export async function getBalanceBlockInfo(address: string) {
     method: 'GET',
   };
   const url = `${pre}https://blockchain.info/multiaddr?active=${address}`;
-  return await request(url, init);
+  const res = await request(url, init);
+  return res
+  return { detail: JSON.stringify(JSON.parse(res.detail).addresses), status: res.status }
 }
 
 export async function getBalanceOwnNode(address: string) {

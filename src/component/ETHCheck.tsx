@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react'
 
-import { Accordion, AccordionPanel, Box, Text, TextInput } from 'grommet'
+import { Accordion, AccordionPanel, Box, TextArea, TextInput } from 'grommet'
 
 import { getBalanceEtherscan, getBalanceInfura } from '../apis/ethereum'
 import { StatusText, StatusTitle } from './APIStatus'
@@ -56,12 +56,12 @@ function ETHCheck() {
           <Accordion>
             <AccordionPanel label={<StatusText status={infuraRes.status} detail="Infura API" />}>
               <Box pad="small">
-                <Text>{infuraRes.detail}</Text>
+                <TextArea value={infuraRes.detail} disabled/>
               </Box>
             </AccordionPanel>
             <AccordionPanel label={<StatusText status={etherscanRes.status} detail="Etherscan API" />}>
               <Box pad="small">
-                <Text>{etherscanRes.detail}</Text>
+                <TextArea value={etherscanRes.detail} disabled/>
               </Box>
             </AccordionPanel>
           </Accordion>

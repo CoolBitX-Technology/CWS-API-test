@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react'
 
-import { Accordion, AccordionPanel, Box, Text, TextInput } from 'grommet'
+import { Accordion, AccordionPanel, Box, TextArea, TextInput } from 'grommet'
 
 import { getBalance } from '../apis/stellar'
 import { StatusText, StatusTitle } from './APIStatus'
@@ -56,12 +56,12 @@ function XLMCheck() {
           <Accordion>
             <AccordionPanel label={<StatusText status={mainnet.status} detail="Mainnet API" />}>
               <Box pad="small">
-                <Text>{mainnet.detail}</Text>
+                <TextArea disabled value={mainnet.detail}/>
               </Box>
             </AccordionPanel>
             <AccordionPanel label={<StatusText status={testnet.status} detail="Testnet API" />}>
               <Box pad="small">
-                <Text>{testnet.detail}</Text>
+                <TextArea disabled value={testnet.detail}/>
               </Box>
             </AccordionPanel>
           </Accordion>

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react'
 
-import { Accordion, AccordionPanel, Box, Text, TextInput } from 'grommet'
+import { Accordion, AccordionPanel, Box, TextArea, TextInput } from 'grommet'
 
 import { getKAGBalance, getKAUBalance } from '../apis/kinesis'
 import { StatusText, StatusTitle } from './APIStatus'
@@ -62,22 +62,22 @@ function XLMCheck() {
           <Accordion>
             <AccordionPanel label={<StatusText status={kauMainnet.status} detail="KAU Mainnet API" />}>
               <Box pad="small">
-                <Text>{kauMainnet.detail}</Text>
+                <TextArea disabled value={kauMainnet.detail}/>
               </Box>
             </AccordionPanel>
             <AccordionPanel label={<StatusText status={kauTestnet.status} detail="KAU Testnet API" />}>
               <Box pad="small">
-                <Text>{kauTestnet.detail}</Text>
+                <TextArea disabled value={kauTestnet.detail}/>
               </Box>
             </AccordionPanel>
             <AccordionPanel label={<StatusText status={kagMainnet.status} detail="KAG Mainnet API" />}>
               <Box pad="small">
-                <Text>{kagMainnet.detail}</Text>
+                <TextArea disabled value={kagMainnet.detail}/>
               </Box>
             </AccordionPanel>
             <AccordionPanel label={<StatusText status={kagTestnet.status} detail="KAG Testnet API" />}>
               <Box pad="small">
-                <Text>{kagTestnet.detail}</Text>
+                <TextArea disabled value={kagTestnet.detail}/>
               </Box>
             </AccordionPanel>
           </Accordion>

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react'
 
-import { Accordion, AccordionPanel, Box, Text, TextInput } from 'grommet'
+import { Accordion, AccordionPanel, Box, TextArea, TextInput } from 'grommet'
 
 import { getBalanceZenSystem } from '../apis/horizen'
 import { StatusText, StatusTitle } from './APIStatus'
@@ -53,7 +53,7 @@ function ZENCheck() {
           <Accordion>
             <AccordionPanel label={<StatusText status={response.status} detail="Zen System" />}>
               <Box pad="small">
-                <Text>{response.detail}</Text>
+                <TextArea value={response.detail} disabled />
               </Box>
             </AccordionPanel>
           </Accordion>

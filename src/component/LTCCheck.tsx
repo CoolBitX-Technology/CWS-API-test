@@ -44,6 +44,7 @@ function LTCCheck() {
 
 
   return (
+    <Box>
     <Accordion>
       <AccordionPanel label={<StatusTitle status={status} detail="Litecoin API" />}>
 
@@ -68,6 +69,7 @@ function LTCCheck() {
         </Box>
       </AccordionPanel>
     </Accordion>
+    </Box>
   )
 }
 
