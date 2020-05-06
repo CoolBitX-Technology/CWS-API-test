@@ -29,7 +29,6 @@ jobs:
         npm run-script build
       env:    
         REACT_APP_CBX_PROXY_KEY: ${{ secrets.REACT_APP_CBX_PROXY_KEY }}
-        REACT_APP_PREFIX: ${{ secrets.REACT_APP_PREFIX }}
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
