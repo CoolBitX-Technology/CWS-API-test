@@ -1,11 +1,7 @@
 import request from './request';
 
-const pre = process.env.REACT_APP_PREFIX || '';
-
-console.log(`using cors proxy ${pre}`);
-
 export async function getBalanceBlockInfo(address: string) {
-  const url = `${pre}https://blockchain.info/multiaddr?active=${address}&cors=true`;
+  const url = `https://blockchain.info/multiaddr?active=${address}&cors=true`;
   return await request(url);
 }
 
