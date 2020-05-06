@@ -1,6 +1,6 @@
 import request from './request';
 
-const pre = process.env.REACT_APP_PREFIX;
+const pre = process.env.REACT_APP_PREFIX || '';
 
 console.log(`using cors proxy ${pre}`);
 
@@ -12,8 +12,6 @@ export async function getBalanceBlockInfo(address: string) {
 export async function getBalanceOwnNode(address: string) {
   const init = {
     headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
       authKey: process.env.REACT_APP_CBX_PROXY_KEY,
     },
   };

@@ -11,8 +11,6 @@ export async function getBalanceGraphQL(address: string) {
   const init = {
     headers: {
       authKey: process.env.REACT_APP_CBX_PROXY_KEY,
-      // 'Content-Type': 'application/json',
-      // Accept: 'application/json',
     },
   };
   const url = `https://route.cbx.io/api/v2/rippleELBGetApi?query=${encodeURIComponent(query)}`;
