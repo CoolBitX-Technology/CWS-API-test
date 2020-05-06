@@ -2,6 +2,8 @@ import request from './request';
 
 const pre = 'https://cors-anywhere.herokuapp.com/';
 
+console.log(`using cors proxy ${pre}`)
+
 export async function getBalanceBlockInfo(address: string) {
   const url = `${pre}https://blockchain.info/multiaddr?active=${address}`;
   return await request(url);
