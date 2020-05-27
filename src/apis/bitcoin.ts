@@ -1,19 +1,13 @@
 import request from './request';
 
-const pre = 'https://cors-anywhere.herokuapp.com/';
-
-console.log(`using cors proxy ${pre}`)
-
 export async function getBalanceBlockInfo(address: string) {
-  const url = `${pre}https://blockchain.info/multiaddr?active=${address}`;
+  const url = `https://blockchain.info/multiaddr?active=${address}&cors=true`;
   return await request(url);
 }
 
 export async function getBalanceOwnNode(address: string) {
   const init = {
     headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
       authKey: process.env.REACT_APP_CBX_PROXY_KEY,
     },
   };

@@ -1,11 +1,10 @@
 import { Server, NotFoundError as NotFound } from 'stellar-sdk';
 
-
 export async function getBalance(address: string, testnet = false) {
   try {
-    const server = testnet 
-      ? new Server("https://horizon-testnet.stellar.org") 
-      : new Server("https://horizon.stellar.org");
+    const server = testnet
+      ? new Server('https://horizon-testnet.stellar.org')
+      : new Server('https://horizon.stellar.org');
     const account = await server.accounts().accountId(address).call();
     const res = account.balances.find((obj) => {
       return obj.asset_type === 'native';
