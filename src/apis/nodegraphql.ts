@@ -1,7 +1,7 @@
 import request from './request';
 
-export async function getGraphqlNodeEndpoint(level = "prod") {
-   const host = level === "prod" ? "cp-production-node-graphql-run-prm3v3teaa-an.a.run.app" : "cp-develop-node-graphql-run-wmh3nzdj4a-an.a.run.app";
+export async function getGraphqlNodeEndpoint() {
+   const host =  "api.wallet.cbx.io";
    const init = {
      headers: {
        'Content-Type': 'application/json',
