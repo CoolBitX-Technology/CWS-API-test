@@ -1,15 +1,15 @@
 import request from './request';
 
-export async function getGraphqlNodeEndpoint() {
-   const host =  "api.wallet.cbx.io";
+export function getGraphqlNodeEndpoint() {
+   const host =  "localhost:8080";
    const init = {
      headers: {
        'Content-Type': 'application/json',
        Accept: 'application/json',
      },
    };
-  const url = `https://${host}/health`;
-  return  await request(url, init);
+  const url = `http://${host}/health`;
+  return request(url, init);
 }
 
 
