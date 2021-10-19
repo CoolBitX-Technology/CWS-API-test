@@ -1,6 +1,6 @@
 import request from './request';
 
-export async function getBalanceBinanceDex(address: string) {
+export function getBalanceBinanceDex(address: string) {
   const init = {
     headers: {
       'Content-Type': 'application/json',
@@ -8,5 +8,5 @@ export async function getBalanceBinanceDex(address: string) {
     },
   };
   const url = `https://dex.binance.org/api/v1/account/${address}`;
-  return await request(url, init);
+  return request(url, init);
 }
