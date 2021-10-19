@@ -1,6 +1,6 @@
 import request from './request';
 
-export async function getBalanceGraphQL(address: string) {
+export function getBalanceGraphQL(address: string) {
   const query = `
     query {
       account(address: "${address}") {
@@ -14,5 +14,5 @@ export async function getBalanceGraphQL(address: string) {
     },
   };
   const url = `https://route.cbx.io/api/v2/rippleELBGetApi?query=${encodeURIComponent(query)}`;
-  return await request(url, init);
+  return request(url, init);
 }

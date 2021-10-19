@@ -17,6 +17,7 @@ import BNBCheck from './component/BNBCheck'
 import ZENCheck from './component/ZENCheck'
 import XLMCheck from './component/XLMCheck'
 import KAUCheck from './component/KA_Check'
+import EndPointCheck from './component/EndPointCheck'
 
 
 const theme = {
@@ -42,6 +43,7 @@ function App() {
           <Heading level='3'>CoolWalletS API Test</Heading>
         </AppBar>
         <Box margin="small">
+        <EndPointCheck/>
         <BTCCheck />
         <LTCCheck />
         <ETHCheck />
